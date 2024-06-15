@@ -1,0 +1,79 @@
+.landing-container {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Color del texto negro */
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px; /* Máximo ancho de la tarjeta */
+    margin: 0 auto; /* Centramos la tarjeta */
+    border-radius: 20px 20px 0 0; /* Bordes superiores redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de tarjeta */
+  }
+  
+  .hero {
+    position: relative;
+    padding: 50px 20px;
+    border-radius: 20px 20px 0 0; /* Bordes superiores redondeados */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    h1 {
+      color: #000000; /* Color del texto negro */
+      font-size: 24px; /* Tamaño de la fuente */
+      font-weight: bold;
+      margin: 0; /* Eliminar el margen por defecto del h1 */
+    }
+    
+    .sponsor {
+      display: flex;
+      align-items: center;
+  
+      .sponsor-text {
+        font-size: 8px; /* Tamaño de la fuente */
+        color: #888888; /* Color del texto "PRESENTADO POR" */
+        margin-right: 10px; /* Espacio entre el texto y el logo */
+        font-weight: bold;
+      }
+  
+      .sponsor-logo {
+        width: 60px; /* Ajustar el tamaño según sea necesario */
+      }
+    }
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones */
+    margin-bottom: 20px;
+  }
+  
+  .nav-button {
+    background-color: #f0f0f0; /* Color de fondo del botón */
+    color: #000000; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px; /* Ajustar el padding para hacer los botones más pequeños */
+    font-size: 14px; /* Tamaño de la fuente más pequeño */
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  
+    &:hover {
+      background-color: #16152F;
+      color:#f0f0f0;
+    }
+  }
+  
+  .players-section {
+    h2 {
+      color: #7B2754; /* Color del título */
+      margin-top: 20px;
+      font-size: 32px; /* Tamaño de la fuente */
+      font-weight: bold;
+    }
+  
+    /* Aquí puedes agregar más estilos para las tarjetas de jugadores */
+  }
+  

@@ -1,0 +1,37 @@
+/* Estilos para el header */
+.navbar {
+    background: linear-gradient(to right, #a50044, #003276); /* Gradiente de colores */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center; /* Centrar la navbar */
+  
+    .navbar-list {
+      list-style: none;
+      display: flex;
+      justify-content: center; /* Centrar los elementos dentro de la lista */
+      margin: 0;
+      padding: 0;
+  
+      .navbar-item {
+        margin: 0 15px;
+  
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 16px;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #fdd835; /* Color de hover */
+          }
+        }
+  
+        &.active a {
+          border-bottom: 2px solid #fdd835; /* Indicador debajo del elemento activo */
+        }
+      }
+    }
+  }
+  

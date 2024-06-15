@@ -1,4 +1,31 @@
-<div>
-    <h1>Landing Players</h1>
-    <app-card></app-card>
+<div class="landing-container">
+  <div class="hero">
+    <h1>FC Barcelona First Team</h1>
+    <div class="sponsor">
+      <span class="sponsor-text">PRESENTADO POR |</span>
+      <img class="sponsor-logo" src="assets/img/konami-24-logo.png" alt="Konami Logo">
+    </div>
   </div>
+  <div class="nav-buttons">
+    <button class="nav-button" (click)="scrollToSection('porteros')">PORTEROS</button>
+    <button class="nav-button" (click)="scrollToSection('defensas')">DEFENSAS</button>
+    <button class="nav-button" (click)="scrollToSection('centrocampistas')">CENTROCAMPISTAS</button>
+    <button class="nav-button" (click)="scrollToSection('delanteros')">DELANTEROS</button>
+  </div>
+  <div id="porteros" class="players-section">
+    <h2>Porteros</h2>
+    <!-- Aquí irán las tarjetas de los jugadores -->
+  </div>
+  <div id="defensas" class="players-section">
+    <h2>Defensas</h2>
+    <!-- Aquí irán las tarjetas de los jugadores -->
+  </div>
+  <div id="centrocampistas" class="players-section">
+    <h2>Centrocampistas</h2>
+    <!-- Aquí irán las tarjetas de los jugadores -->
+  </div>
+  <div id="delanteros" class="players-section">
+    <h2>Delanteros</h2>
+    <!-- Aquí irán las tarjetas de los jugadores -->
+  </div>
+</div>
