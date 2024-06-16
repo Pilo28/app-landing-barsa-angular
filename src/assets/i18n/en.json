@@ -1,5 +1,27 @@
 {
-    "hello": "Hello",
-    "language": "English"
+    "fc.barcelona": "FC barcelona - first team",
+    "fc.first": "FC barcelona first team",
+    "fc.porteros": "goalkeepers",
+    "fc.defensas": "defenders",
+    "fc.centrocampistas": "midfielders",
+    "fc.delanteros": "forwards",
+    "fc.partidos": "matches",
+    "fc.goles": "goals",
+    "fc.asistencias": "assists",
+    "fc.porteria": "clean sheet",
+    "fc.paradas": "saves",
+    "fc.nacionalidad": "nationality",
+    "fc.peso": "weight",
+    "fc.altura": "height",
+    "fc.temporada": "season 2023/2024",
+    "actualidad": "News",
+    "calendario": "Calendar",
+    "entradas": "Tickets",
+    "resultados": "Results",
+    "clasificacion": "Standings",
+    "jugadores": "Players",
+    "fotos": "Photos",
+    "palmares": "Trophies",
+    "especiales": "Specials"
 }
   

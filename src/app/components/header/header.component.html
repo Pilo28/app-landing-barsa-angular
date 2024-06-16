@@ -1,14 +1,18 @@
 <nav class="navbar">
-    <ul class="navbar-list">
-      <li class="navbar-item"><a href="#">Actualidad</a></li>
-      <li class="navbar-item"><a href="#">Calendario</a></li>
-      <li class="navbar-item"><a href="#">Entradas</a></li>
-      <li class="navbar-item"><a href="#">Resultados</a></li>
-      <li class="navbar-item"><a href="#">Clasificación</a></li>
-      <li class="navbar-item"><a href="#">Jugadores</a></li>
-      <li class="navbar-item"><a href="#">Fotos</a></li>
-      <li class="navbar-item"><a href="#">Palmarés</a></li>
-      <li class="navbar-item"><a href="#">Especiales</a></li>
-    </ul>
-  </nav>
-  
+  <ul class="navbar-list">
+    <li class="navbar-item"><a href="#">{{ 'actualidad' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'calendario' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'entradas' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'resultados' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'clasificacion' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'jugadores' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'fotos' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'palmares' | translate }}</a></li>
+    <li class="navbar-item"><a href="#">{{ 'especiales' | translate }}</a></li>
+  </ul>
+  <div class="language-switcher">
+    <img src="assets/flags/flag-en.png" alt="English" (click)="switchLanguage('en')">
+    <img src="assets/flags/flag-es.png" alt="Español" (click)="switchLanguage('es')">
+    <img src="assets/flags/flag-ca.png" alt="Català" (click)="switchLanguage('ca')">
+  </div>
+</nav>

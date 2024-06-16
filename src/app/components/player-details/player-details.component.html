@@ -2,29 +2,29 @@
   <div class="player-info">
     <div class="stats">
       <div class="stat-item">
-        <p class="title">PARTIDOS</p>
+        <p class="title">{{ 'fc.partidos' | translate | uppercase}}</p>
         <p class="value">{{ player.matches }}</p>
-        <p class="season">Temporada 2023/2024</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
       </div>
       <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
-        <p class="title">GOLES</p>
+        <p class="title">{{ 'fc.goles' | translate | uppercase}}</p>
         <p class="value">{{ player.goals }}</p>
-        <p class="season">Temporada 2023/2024</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
       </div>
       <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
-        <p class="title">ASISTENCIAS</p>
+        <p class="title">{{ 'fc.asistencias' | translate | uppercase}}</p>
         <p class="value">{{ player.assists }}</p>
-        <p class="season">Temporada 2023/2024</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
       </div>
       <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
-        <p class="title">PORTERÍAS A CERO</p>
+        <p class="title">{{ 'fc.porteria' | translate | uppercase}}</p>
         <p class="value">{{ player.clean_sheets }}</p>
-        <p class="season">Temporada 2023/2024</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
       </div>
       <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
-        <p class="title">PARADAS</p>
+        <p class="title">{{ 'fc.paradas' | translate | uppercase}}</p>
         <p class="value">{{ player.saves }}</p>
-        <p class="season">Temporada 2023/2024</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
       </div>
     </div>
   </div>
@@ -48,19 +48,19 @@
   <hr>
   <div class="additional-info">
     <div class="info-item">
-      <h2>NACIONALIDAD</h2>
+      <h2>{{ 'fc.nacionalidad' | translate | uppercase}}</h2>
       <p>{{ player.nationality }}</p>
     </div>
     <div class="info-item">
-      <h2>PESO</h2>
+      <h2>{{ 'fc.peso' | translate | uppercase}}</h2>
       <p>{{ player.weight }}</p>
     </div>
     <div class="info-item">
-      <h2>ALTURA</h2>
+      <h2>{{ 'fc.altura' | translate | uppercase}}</h2>
       <p>{{ player.height }}</p>
     </div>
     <div class="info-item">
-      <h2>PARTIDOS</h2>
+      <h2>{{ 'fc.partidos' | translate | uppercase}}</h2>
       <p>{{ player.matches }}</p>
     </div>
   </div>

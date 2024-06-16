@@ -6,29 +6,29 @@
   </div>
   <div class="additional-info">
     <div class="info-block">
-      <p class="label">PARTIDOS</p>
+      <p class="label">{{ 'fc.partidos' | translate | uppercase}}</p>
       <p class="value">{{ player.matches }}</p>
-      <p class="season">Temporada 2023/2024</p>
+      <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
     </div>
     <div *ngIf="player.position !== 'Goalkeeper'" class="info-block">
-      <p class="label">GOLES</p>
+      <p class="label">{{ 'fc.goles' | translate | uppercase}}</p>
       <p class="value">{{ player.goals }}</p>
-      <p class="season">Temporada 2023/2024</p>
+      <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
     </div>
     <div *ngIf="player.position !== 'Goalkeeper'" class="info-block">
-      <p class="label">ASISTENCIAS</p>
+      <p class="label">{{ 'fc.asistencias' | translate | uppercase}}</p>
       <p class="value">{{ player.assists }}</p>
-      <p class="season">Temporada 2023/2024</p>
+      <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
     </div>
     <div *ngIf="player.position === 'Goalkeeper'" class="info-block">
-      <p class="label">PORTERÍAS A CERO</p>
+      <p class="label">{{ 'fc.porteria' | translate | uppercase}}</p>
       <p class="value">{{ player.clean_sheets }}</p>
-      <p class="season">Temporada 2023/2024</p>
+      <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
     </div>
     <div *ngIf="player.position === 'Goalkeeper'" class="info-block">
-      <p class="label">PARADAS</p>
+      <p class="label">{{ 'fc.paradas' | translate | uppercase}}</p>
       <p class="value">{{ player.saves }}</p>
-      <p class="season">Temporada 2023/2024</p>
+      <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
     </div>
   </div>
 </div>

@@ -1,4 +1,26 @@
 {
-    "hello": "Hola",
-    "language": "Catalá"
+    "fc.barcelona": "FC Barcelona - primer equip",
+    "fc.first": "FC Barcelona primer equip",
+    "fc.porteros": "porters",
+    "fc.defensas": "defenses",
+    "fc.centrocampistas": "centrecampistes",
+    "fc.delanteros": "davants",
+    "fc.partidos": "partits",
+    "fc.goles": "gols",
+    "fc.asistencias": "assistències",
+    "fc.porteria": "portería a zero",
+    "fc.paradas": "aturades",
+    "fc.nacionalidad": "nacionalitat",
+    "fc.peso": "pes",
+    "fc.altura": "alçada",
+    "fc.temporada": "temporada 2023/2024",
+    "actualidad": "Actualitat",
+    "calendario": "Calendari",
+    "entradas": "Entrades",
+    "resultados": "Resultats",
+    "clasificacion": "Classificació",
+    "jugadores": "Jugadors",
+    "fotos": "Fotos",
+    "palmares": "Palmarès",
+    "especiales": "Especials"
 }

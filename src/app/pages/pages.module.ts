@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeComponent } from './home/home.component';
 import { LandingPlayersComponent } from './landing-players/landing-players.component';
@@ -23,7 +24,8 @@ import { PlayerDetailsComponent  } from '../components/player-details/player-det
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    TranslateModule
   ]
 })
 export class PagesModule { }

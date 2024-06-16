@@ -1,37 +1,37 @@
 <div class="landing-container">
   <div class="hero">
-    <h1>FC Barcelona First Team</h1>
+    <h1>{{ 'fc.first' | translate | titlecase}}</h1>
     <div class="sponsor">
       <span class="sponsor-text">PRESENTADO POR |</span>
       <img class="sponsor-logo" src="assets/img/konami-24-logo.png" alt="Konami Logo">
     </div>
   </div>
   <div class="nav-buttons">
-    <button class="nav-button" (click)="scrollToSection('porteros')">PORTEROS</button>
-    <button class="nav-button" (click)="scrollToSection('defensas')">DEFENSAS</button>
-    <button class="nav-button" (click)="scrollToSection('centrocampistas')">CENTROCAMPISTAS</button>
-    <button class="nav-button" (click)="scrollToSection('delanteros')">DELANTEROS</button>
+    <button class="nav-button" (click)="scrollToSection('porteros')">{{ 'fc.porteros' | translate | uppercase}}</button>
+    <button class="nav-button" (click)="scrollToSection('defensas')">{{ 'fc.defensas' | translate | uppercase}}</button>
+    <button class="nav-button" (click)="scrollToSection('centrocampistas')">{{ 'fc.centrocampistas' | translate | uppercase}}</button>
+    <button class="nav-button" (click)="scrollToSection('delanteros')">{{ 'fc.delanteros' | translate | uppercase}}</button>
   </div>
   <div id="porteros" class="players-section">
-    <h2>Porteros</h2>
+    <h2>{{ 'fc.porteros' | translate | titlecase}}</h2>
     <div class="player-cards">
       <app-card *ngFor="let player of getPlayersByPosition('Goalkeeper')" [player]="player"></app-card>
     </div>
   </div>
   <div id="defensas" class="players-section">
-    <h2>Defensas</h2>
+    <h2>{{ 'fc.defensas' | translate | titlecase}}</h2>
     <div class="player-cards">
       <app-card *ngFor="let player of getPlayersByPosition('Defender')" [player]="player"></app-card>
     </div>
   </div>
   <div id="centrocampistas" class="players-section">
-    <h2>Centrocampistas</h2>
+    <h2>{{ 'fc.centrocampistas' | translate | titlecase}}</h2>
     <div class="player-cards">
       <app-card *ngFor="let player of getPlayersByPosition('Midfielder')" [player]="player"></app-card>
     </div>
   </div>
   <div id="delanteros" class="players-section">
-    <h2>Delanteros</h2>
+    <h2>{{ 'fc.delanteros' | translate | titlecase}}</h2>
     <div class="player-cards">
       <app-card *ngFor="let player of getPlayersByPosition('Forward')" [player]="player"></app-card>
     </div>
