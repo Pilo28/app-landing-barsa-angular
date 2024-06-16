@@ -1,1 +1,24 @@
-<p>card works!</p>
+<div class="player-card">
+  <img [src]="player.photo" alt="{{ player.name }}">
+  <div class="player-info">
+    <h3>{{ player.number }} {{ player.name }}</h3>
+    <p>{{ player.position }}</p>
+  </div>
+  <div class="additional-info">
+    <div class="info-block">
+      <p class="label">PARTIDOS</p>
+      <p class="value">{{ player.matches }}</p>
+      <p class="season">Temporada 2023/2024</p>
+    </div>
+    <div class="info-block">
+      <p class="label">GOLES</p>
+      <p class="value">{{ player.goals }}</p>
+      <p class="season">Temporada 2023/2024</p>
+    </div>
+    <div class="info-block">
+      <p class="label">ASISTENCIAS</p>
+      <p class="value">{{ player.assists }}</p>
+      <p class="season">Temporada 2023/2024</p>
+    </div>
+  </div>
+</div>

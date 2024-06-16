@@ -11,21 +11,31 @@
     <button class="nav-button" (click)="scrollToSection('defensas')">DEFENSAS</button>
     <button class="nav-button" (click)="scrollToSection('centrocampistas')">CENTROCAMPISTAS</button>
     <button class="nav-button" (click)="scrollToSection('delanteros')">DELANTEROS</button>
+
   </div>
   <div id="porteros" class="players-section">
     <h2>Porteros</h2>
-    <!-- Aquí irán las tarjetas de los jugadores -->
+    <div class="player-cards">
+      <app-card *ngFor="let player of getPlayersByPosition('Goalkeeper')" [player]="player"></app-card>
+    </div>
   </div>
   <div id="defensas" class="players-section">
     <h2>Defensas</h2>
-    <!-- Aquí irán las tarjetas de los jugadores -->
+    <div class="player-cards">
+      <app-card *ngFor="let player of getPlayersByPosition('Defender')" [player]="player"></app-card>
+    </div>
   </div>
   <div id="centrocampistas" class="players-section">
     <h2>Centrocampistas</h2>
-    <!-- Aquí irán las tarjetas de los jugadores -->
+    <div class="player-cards">
+      <app-card *ngFor="let player of getPlayersByPosition('Midfielder')" [player]="player"></app-card>
+    </div>
   </div>
   <div id="delanteros" class="players-section">
     <h2>Delanteros</h2>
-    <!-- Aquí irán las tarjetas de los jugadores -->
+    <div class="player-cards">
+      <app-card *ngFor="let player of getPlayersByPosition('Forward')" [player]="player"></app-card>
+    </div>
   </div>
+
 </div>
