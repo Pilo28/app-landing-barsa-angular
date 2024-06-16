@@ -11,7 +11,6 @@
     <button class="nav-button" (click)="scrollToSection('defensas')">DEFENSAS</button>
     <button class="nav-button" (click)="scrollToSection('centrocampistas')">CENTROCAMPISTAS</button>
     <button class="nav-button" (click)="scrollToSection('delanteros')">DELANTEROS</button>
-
   </div>
   <div id="porteros" class="players-section">
     <h2>Porteros</h2>
@@ -37,5 +36,4 @@
       <app-card *ngFor="let player of getPlayersByPosition('Forward')" [player]="player"></app-card>
     </div>
   </div>
-
 </div>

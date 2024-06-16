@@ -7,6 +7,7 @@ import { LandingPlayersComponent } from './landing-players/landing-players.compo
 import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { CardComponent } from '../components/card/card.component';
+import { PlayerDetailsComponent  } from '../components/player-details/player-details.component';
 
 
 
@@ -17,7 +18,8 @@ import { CardComponent } from '../components/card/card.component';
     LandingPlayersComponent,
     HeaderComponent, 
     FooterComponent,
-    CardComponent 
+    CardComponent,
+    PlayerDetailsComponent 
   ],
   imports: [
     CommonModule,

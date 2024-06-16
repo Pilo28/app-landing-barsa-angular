@@ -1,4 +1,4 @@
-<div class="player-card">
+<div class="player-card" (click)="navigateToPlayerDetail()">
   <img [src]="player.photo" alt="{{ player.name }}">
   <div class="player-info">
     <h3>{{ player.number }} {{ player.name }}</h3>
@@ -10,14 +10,24 @@
       <p class="value">{{ player.matches }}</p>
       <p class="season">Temporada 2023/2024</p>
     </div>
-    <div class="info-block">
+    <div *ngIf="player.position !== 'Goalkeeper'" class="info-block">
       <p class="label">GOLES</p>
       <p class="value">{{ player.goals }}</p>
       <p class="season">Temporada 2023/2024</p>
     </div>
-    <div class="info-block">
+    <div *ngIf="player.position !== 'Goalkeeper'" class="info-block">
       <p class="label">ASISTENCIAS</p>
       <p class="value">{{ player.assists }}</p>
+      <p class="season">Temporada 2023/2024</p>
+    </div>
+    <div *ngIf="player.position === 'Goalkeeper'" class="info-block">
+      <p class="label">PORTERÍAS A CERO</p>
+      <p class="value">{{ player.clean_sheets }}</p>
+      <p class="season">Temporada 2023/2024</p>
+    </div>
+    <div *ngIf="player.position === 'Goalkeeper'" class="info-block">
+      <p class="label">PARADAS</p>
+      <p class="value">{{ player.saves }}</p>
       <p class="season">Temporada 2023/2024</p>
     </div>
   </div>

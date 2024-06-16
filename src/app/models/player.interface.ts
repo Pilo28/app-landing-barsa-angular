@@ -1,4 +1,5 @@
 export interface Player {
+  id: number;
   name: string;
   position: string;
   number: number;
@@ -8,8 +9,10 @@ export interface Player {
   weight: string;
   seasons: number;
   matches: number;
-  goals: number;
-  assists: number;
+  goals?: number;
+  assists?: number;
+  clean_sheets?: number;
+  saves?: number;
   info: string;
   photo: string;
 }

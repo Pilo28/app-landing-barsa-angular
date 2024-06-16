@@ -1,0 +1,17 @@
+<div *ngIf="player">
+  <img [src]="player.photo" alt="{{ player.name }}">
+  <h2>{{ player.name }}</h2>
+  <p>Position: {{ player.position }}</p>
+  <p>Number: {{ player.number }}</p>
+  <p>Nationality: {{ player.nationality }}</p>
+  <p>Age: {{ player.age }}</p>
+  <p>Height: {{ player.height }}</p>
+  <p>Weight: {{ player.weight }}</p>
+  <p>Seasons: {{ player.seasons }}</p>
+  <p>Matches: {{ player.matches }}</p>
+  <p *ngIf="player.position !== 'Goalkeeper'">Goals: {{ player.goals }}</p>
+  <p *ngIf="player.position !== 'Goalkeeper'">Assists: {{ player.assists }}</p>
+  <p *ngIf="player.position === 'Goalkeeper'">Clean Sheets: {{ player.clean_sheets }}</p>
+  <p *ngIf="player.position === 'Goalkeeper'">Saves: {{ player.saves }}</p>
+  <p>Info: {{ player.info }}</p>
+</div>
