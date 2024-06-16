@@ -1,0 +1,17 @@
+.site-footer {
+    height: 350px;
+    background-color: #181733;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  
+    .footer-content {
+      text-align: center;
+  
+      h1 {
+        color: #ffffff;
+        font-size: 24px; // Puedes ajustar el tamaño de la fuente según tus necesidades
+      }
+    }
+  }
+  

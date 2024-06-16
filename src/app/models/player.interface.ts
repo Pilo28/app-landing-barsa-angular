@@ -15,4 +15,5 @@ export interface Player {
   saves?: number;
   info: string;
   photo: string;
+  photo_new: string;
 }

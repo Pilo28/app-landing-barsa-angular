@@ -1,17 +1,69 @@
-<div *ngIf="player">
-  <img [src]="player.photo" alt="{{ player.name }}">
-  <h2>{{ player.name }}</h2>
-  <p>Position: {{ player.position }}</p>
-  <p>Number: {{ player.number }}</p>
-  <p>Nationality: {{ player.nationality }}</p>
-  <p>Age: {{ player.age }}</p>
-  <p>Height: {{ player.height }}</p>
-  <p>Weight: {{ player.weight }}</p>
-  <p>Seasons: {{ player.seasons }}</p>
-  <p>Matches: {{ player.matches }}</p>
-  <p *ngIf="player.position !== 'Goalkeeper'">Goals: {{ player.goals }}</p>
-  <p *ngIf="player.position !== 'Goalkeeper'">Assists: {{ player.assists }}</p>
-  <p *ngIf="player.position === 'Goalkeeper'">Clean Sheets: {{ player.clean_sheets }}</p>
-  <p *ngIf="player.position === 'Goalkeeper'">Saves: {{ player.saves }}</p>
-  <p>Info: {{ player.info }}</p>
+<div *ngIf="player" class="player-container">
+  <div class="player-info">
+    <div class="stats">
+      <div class="stat-item">
+        <p class="title">PARTIDOS</p>
+        <p class="value">{{ player.matches }}</p>
+        <p class="season">Temporada 2023/2024</p>
+      </div>
+      <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
+        <p class="title">GOLES</p>
+        <p class="value">{{ player.goals }}</p>
+        <p class="season">Temporada 2023/2024</p>
+      </div>
+      <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
+        <p class="title">ASISTENCIAS</p>
+        <p class="value">{{ player.assists }}</p>
+        <p class="season">Temporada 2023/2024</p>
+      </div>
+      <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
+        <p class="title">PORTERÍAS A CERO</p>
+        <p class="value">{{ player.clean_sheets }}</p>
+        <p class="season">Temporada 2023/2024</p>
+      </div>
+      <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
+        <p class="title">PARADAS</p>
+        <p class="value">{{ player.saves }}</p>
+        <p class="season">Temporada 2023/2024</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="player-image">
+    <img [src]="player.photo_new" alt="{{ player.name }}">
+    <div class="image-overlay">
+      <p>{{ player.position }}</p>
+      <h2>{{ player.name }}</h2>
+    </div>
+  </div>
 </div>
+
+<div *ngIf="player" class="landing-container">
+  <div class="player-info">
+    <img [src]="player.photo" alt="{{ player.name }}" class="player-photo">
+    <div class="info-container">
+      <p class="description">{{ player.info }}</p>
+    </div>
+  </div>
+  <hr>
+  <div class="additional-info">
+    <div class="info-item">
+      <h2>NACIONALIDAD</h2>
+      <p>{{ player.nationality }}</p>
+    </div>
+    <div class="info-item">
+      <h2>PESO</h2>
+      <p>{{ player.weight }}</p>
+    </div>
+    <div class="info-item">
+      <h2>ALTURA</h2>
+      <p>{{ player.height }}</p>
+    </div>
+    <div class="info-item">
+      <h2>PARTIDOS</h2>
+      <p>{{ player.matches }}</p>
+    </div>
+  </div>
+</div>
+
+

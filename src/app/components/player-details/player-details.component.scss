@@ -1,0 +1,176 @@
+// Variables
+$primary-color: #112c55;
+$highlight-color: #ffca00;
+$text-color: #ffffff;
+$secondary-color: #1c3b70;
+$shadow-color: rgba(0, 0, 0, 0.5);
+$gradient-start: #181E41;
+$gradient-end: #153C78;
+$top-gradient: #0F0E19;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Estilos del contenedor principal
+.player-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 0px;
+  background: linear-gradient(to right, $top-gradient 0%, $gradient-start 50%, $gradient-end 100%);
+  color: $text-color;
+  position: relative;
+  overflow: hidden;
+
+  .player-info {
+    max-width: 100%;
+    height: auto;
+    margin-top: -350px;
+    @include flex-column;
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+
+        .title {
+          font-size: 0.6em;
+          color: $text-color;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+
+        .value {
+          font-size: 3em;
+          color: $highlight-color;
+          font-weight: bold;
+          
+        }
+
+        .season {
+          font-size: 0.6em;
+          color: $text-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .player-image {
+    position: relative;
+    img {
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto;
+      margin-top: -50px;
+    }
+
+    .image-overlay {
+      position: absolute;
+      bottom: 0px;
+      left: 30%;
+      width: 60%;
+      right: 10%;
+      background: rgba(10, 16, 33, 0.9);
+      color: $text-color;
+      padding: 40px;
+      text-align: center;
+      
+
+      h2 {
+        font-size: 1.5em;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.landing-container {
+    color: #000000; /* Color del texto negro */
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px; /* Máximo ancho de la tarjeta */
+    margin: 0 auto; /* Centramos la tarjeta */
+    border-radius: 20px 20px 0 0; /* Bordes superiores redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de tarjeta */
+  }
+
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+  
+    .player-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+  
+      .player-photo {
+        max-width: 30%;
+        border-radius: 10px;
+        margin-right: 20px;
+        padding-top: 30px;
+        padding-left: 30px;
+      }
+  
+      .info-container {
+        max-width: 800px;
+        color: #000;
+  
+        .description {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  
+    .additional-info {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 100%;
+  
+      .info-item {
+        flex: 1;
+        min-width: 150px;
+        margin: 10px 20px;
+  
+        h2 {
+          font-size: 18px;
+          margin: 10px 0;
+        }
+  
+        p {
+          font-size: 16px;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+  
