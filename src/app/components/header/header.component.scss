@@ -1,12 +1,4 @@
-/* Estilos para el header */
-:host {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
-  background-color: white; /* Puedes cambiar el color de fondo según sea necesario */
-}
+
 
 .navbar {
     background: linear-gradient(to right, #a50044, #003276); /* Gradiente de colores */
