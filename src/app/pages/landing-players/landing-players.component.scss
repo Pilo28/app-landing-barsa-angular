@@ -1,12 +1,16 @@
+
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
 .landing-container {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #000000; /* Color del texto negro */
+  background-color: $landing-bg-color;
+  color: $landing-text-color;
   padding: 20px;
   text-align: center;
-  max-width: 1200px; /* Máximo ancho de la tarjeta */
-  margin: 0 auto; /* Centramos la tarjeta */
-  border-radius: 20px 20px 0 0; /* Bordes superiores redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de tarjeta */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  border-radius: $landing-border-radius $landing-border-radius 0 0; 
+  box-shadow: $landing-box-shadow; 
 }
 
 .hero {
@@ -18,10 +22,10 @@
   align-items: center;
 
   h1 {
-    color: #000000; /* Color del texto negro */
-    font-size: 24px; /* Tamaño de la fuente */
+    color: $hero-text-color; 
+    font-size: $hero-font-size-small; 
     font-weight: bold;
-    margin: 0; /* Eliminar el margen por defecto del h1 */
+    margin: 0; 
   }
 
   .sponsor {
@@ -29,13 +33,13 @@
     align-items: center;
 
     .sponsor-text {
-      font-size: 10px; /* Tamaño de la fuente */
-      color: #888888; /* Color del texto "PRESENTADO POR" */
-      margin-right: 10px; /* Espacio entre el texto y el logo */
+      font-size: $small-font-size; 
+      color: $sponsor-text-color; 
+      margin-right: 10px; 
     }
 
     .sponsor-logo {
-      width: 60px; /* Ajustar el tamaño según sea necesario */
+      width: $sponsor-logo-width; 
     }
   }
 }
@@ -43,31 +47,34 @@
 .nav-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Espacio entre botones */
+  gap: 10px; 
   margin-bottom: 20px;
 }
 
 .nav-button {
-  background-color: #f0f0f0; /* Color de fondo del botón */
-  color: #000000; /* Color del texto del botón */
+  background-color: $nav-button-bg-color; 
+  color: $nav-button-text-color; 
   border: none;
-  padding: 10px 20px; /* Ajustar el padding para hacer los botones más pequeños */
-  font-size: 14px; /* Tamaño de la fuente más pequeño */
+  padding: 10px 20px; 
+  font-size: 14px; 
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  @include transitions(
+    background-color $transition-duration ease,
+    color $transition-duration ease
+  );
 
   &:hover {
-    background-color: #e0e0e0;
+    background-color: $nav-button-bg-hover;
   }
 }
 
 .players-section {
   h2 {
-    color: #7C2753; /* Color del título */
+    color: $players-title-color; 
     margin-top: 20px;
-    font-size: 32px; /* Tamaño de la fuente */
+    font-size: $players-title-font-size; 
     font-weight: bold;
   }
 

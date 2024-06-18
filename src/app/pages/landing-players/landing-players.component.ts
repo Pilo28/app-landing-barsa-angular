@@ -19,16 +19,16 @@ export class LandingPlayersComponent implements OnInit {
   getPlayers(): void {
     this.playersService.getPlayers().subscribe(
       (players: Player[]) => {
-        console.log('Players fetched:', players); // Verifica los datos en la consola
+        console.log('Players fetched:', players); 
         if (Array.isArray(players)) {
           this.players = players;
-          console.log('Players assigned to this.players:', this.players); // Verifica los datos en la consola
+          console.log('Players assigned to this.players:', this.players); 
         } else {
           console.error('Players fetched is not an array:', players);
         }
       },
       (error) => {
-        console.error('Error fetching players:', error); // Manejo de errores
+        console.error('Error fetching players:', error); 
       }
     );
   }

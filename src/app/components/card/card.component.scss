@@ -1,8 +1,12 @@
+
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
 .player-card {
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  background: #181733;
+  @include transition(transform, $transition-duration, ease);
+  background: $background-color;
   cursor: pointer;
 
   img {
@@ -11,25 +15,25 @@
     height: auto;
   }
 
-   /* Añade el pseudo-elemento para el gradiente */
-   &::before {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(24, 23, 51, 0) 0%, rgba(24, 23, 51, 0.5) 50%, rgba(24, 23, 51, 0.8) 100%);
+    background: linear-gradient(to bottom, $gradient-color-start 0%, $gradient-color-middle 50%, $gradient-color-end 100%);
     z-index: 1;
   }
+
   .player-info {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 15px;
-    color: #fff;
+    padding: $info-padding;
+    color: $white-color;
     text-align: center;
-    transition: transform 0.3s ease;
+    @include transition(transform, $transition-duration, ease);
     z-index: 2; 
   }
 
@@ -37,10 +41,10 @@
     position: absolute;
     bottom: -100%;
     width: 100%;
-    padding: 10px;
-    color: #fff;
+    padding: $additional-info-padding;
+    color: $white-color;
     text-align: center;
-    transition: bottom 0.3s ease;
+    @include transition(bottom, $transition-duration, ease);
     display: flex;
     justify-content: space-between;
     z-index: 3; 
@@ -54,15 +58,15 @@
       }
 
       .value {
-        font-size: 24px;
+        font-size: $large-font-size;
         font-weight: bold;
       }
 
       .season {
-        font-size: 10px; /* Ajusta el tamaño de la fuente según sea necesario */
-        color: #888;
-        margin-top: -5px; /* Opcional: ajusta el espacio superior si es necesario */
-        white-space: nowrap; /* Asegura que se mantenga en una sola línea */
+        font-size: $small-font-size; 
+        color: $light-gray-color;
+        margin-top: -5px; 
+        white-space: nowrap; 
       }
     }
   }

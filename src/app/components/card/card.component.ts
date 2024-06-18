@@ -14,10 +14,9 @@ export class CardComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    // Simular carga de datos
     setTimeout(() => {
       this.isLoading = false;
-    }, 1000); // 1000 milisegundos = 1 segundo
+    }, 1000); 
   }
 
   navigateToPlayerDetail(): void {

@@ -1,24 +1,5 @@
-// Variables
-$primary-color: #112c55;
-$highlight-color: #ffca00;
-$text-color: #ffffff;
-$secondary-color: #1c3b70;
-$shadow-color: rgba(0, 0, 0, 0.5);
-$gradient-start: #181E41;
-$gradient-end: #153C78;
-$top-gradient: #0F0E19;
-
-// Mixins
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .player-container {
   display: flex;
@@ -42,7 +23,6 @@ $top-gradient: #0F0E19;
       margin-bottom: 10px;
     }
 
-
     .stats {
       display: flex;
       justify-content: space-around;
@@ -62,7 +42,6 @@ $top-gradient: #0F0E19;
           font-size: 3em;
           color: $highlight-color;
           font-weight: bold;
-          
         }
 
         .season {
@@ -76,6 +55,7 @@ $top-gradient: #0F0E19;
 
   .player-image {
     position: relative;
+
     img {
       border-radius: 15px;
       max-width: 100%;
@@ -93,7 +73,6 @@ $top-gradient: #0F0E19;
       color: $text-color;
       padding: 40px;
       text-align: center;
-      
 
       h2 {
         font-size: 1.5em;
@@ -108,76 +87,70 @@ $top-gradient: #0F0E19;
 }
 
 .spinner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Ajusta esto según el contenedor */
+  @include flex-center;
+  height: 100vh; 
 }
 
-
 .landing-container {
-    color: #000000; /* Color del texto negro */
-    padding: 20px;
-    text-align: center;
-    max-width: 1200px; /* Máximo ancho de la tarjeta */
-    margin: 0 auto; /* Centramos la tarjeta */
-    border-radius: 20px 20px 0 0; /* Bordes superiores redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de tarjeta */
+  color: #000000; 
+  padding: 20px;
+  text-align: center;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  border-radius: 20px 20px 0 0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: $white-color;
+  font-family: Arial, sans-serif;
+
+  .player-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .player-photo {
+      max-width: 30%;
+      border-radius: 10px;
+      margin-right: 20px;
+      padding-top: 30px;
+      padding-left: 30px;
+    }
+
+    .info-container {
+      max-width: 800px;
+      color: #000;
+
+      .description {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
   }
 
-  .landing-container {
+  .additional-info {
     display: flex;
-    flex-direction: column;
-    padding: 30px;
-    background-color: #fff;
-    font-family: Arial, sans-serif;
-  
-    .player-info {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 20px;
-  
-      .player-photo {
-        max-width: 30%;
-        border-radius: 10px;
-        margin-right: 20px;
-        padding-top: 30px;
-        padding-left: 30px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+
+    .info-item {
+      flex: 1;
+      min-width: 150px;
+      margin: 10px 20px;
+
+      h2 {
+        font-size: 18px;
+        margin: 10px 0;
       }
-  
-      .info-container {
-        max-width: 800px;
-        color: #000;
-  
-        .description {
-          font-size: 18px;
-          margin-bottom: 20px;
-        }
-      }
-    }
-  
-    .additional-info {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      width: 100%;
-  
-      .info-item {
-        flex: 1;
-        min-width: 150px;
-        margin: 10px 20px;
-  
-        h2 {
-          font-size: 18px;
-          margin: 10px 0;
-        }
-  
-        p {
-          font-size: 16px;
-          margin: 5px 0;
-        }
+
+      p {
+        font-size: 16px;
+        margin: 5px 0;
       }
     }
   }
-  
+}

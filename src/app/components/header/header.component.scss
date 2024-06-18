@@ -1,10 +1,13 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
 .navbar {
-  background: linear-gradient(to right, #a50044, #003276);
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, $navbar-gradient-start, $navbar-gradient-end);
+  padding: $navbar-padding;
+  box-shadow: $navbar-box-shadow;
   display: flex;
-  justify-content: space-between; /* Cambiado a espacio entre para alinear a la derecha */
-  align-items: center; /* Alineación vertical */
+  justify-content: space-between; 
+  align-items: center; 
 
   .navbar-list {
     list-style: none;
@@ -14,36 +17,36 @@
     padding: 0;
 
     .navbar-item {
-      margin: 0 15px;
+      margin: $navbar-item-margin;
 
       a {
-        color: #fff;
+        color: $white-color;
         text-decoration: none;
         font-weight: bold;
-        font-size: 16px;
-        transition: color 0.3s;
+        font-size: $navbar-font-size;
+        @include transition(color, $transition-duration, ease);
 
         &:hover {
-          color: #fdd835;
+          color: $primary-color;
         }
       }
 
       &.active a {
-        border-bottom: 2px solid #fdd835;
+        border-bottom: 2px solid $primary-color;
       }
     }
   }
 
   .language-switcher {
     display: flex;
-    gap: 10px; /* Espacio entre las banderas */
-    margin-right: 20px; /* Espacio a la derecha */
+    gap: $language-switcher-gap; 
+    margin-right: $language-switcher-margin-right; 
 
     img {
-      width: 24px; /* Tamaño de las banderas */
+      width: $flag-width; 
       height: auto;
       cursor: pointer;
-      transition: transform 0.3s;
+      @include transition(transform, $transition-duration, ease);
 
       &:hover {
         transform: scale(1.1);
