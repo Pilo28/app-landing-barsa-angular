@@ -9,7 +9,7 @@ import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { CardComponent } from '../components/card/card.component';
 import { PlayerDetailsComponent  } from '../components/player-details/player-details.component';
-
+import { BackgroundImgComponent } from '../components/background-img/background-img.component';
 
 
 
@@ -20,7 +20,8 @@ import { PlayerDetailsComponent  } from '../components/player-details/player-det
     HeaderComponent, 
     FooterComponent,
     CardComponent,
-    PlayerDetailsComponent 
+    PlayerDetailsComponent,
+    BackgroundImgComponent 
   ],
   imports: [
     CommonModule,
