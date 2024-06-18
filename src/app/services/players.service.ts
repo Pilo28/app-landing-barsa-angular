@@ -3,12 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Player } from '../models/player.interface';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlayersService {
-  private playersUrl = 'assets/data/players.json'; // Ruta al archivo JSON
+  private playersUrl = environment.apiUrl; 
 
   constructor(private http: HttpClient) {}
 

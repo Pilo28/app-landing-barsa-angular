@@ -20,7 +20,6 @@ $top-gradient: #0F0E19;
   flex-direction: column;
 }
 
-// Estilos del contenedor principal
 .player-container {
   display: flex;
   justify-content: space-between;
@@ -107,6 +106,14 @@ $top-gradient: #0F0E19;
     }
   }
 }
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta esto según el contenedor */
+}
+
 
 .landing-container {
     color: #000000; /* Color del texto negro */

@@ -1,69 +1,75 @@
-<div *ngIf="player" class="player-container">
-  <div class="player-info">
-    <div class="stats">
-      <div class="stat-item">
-        <p class="title">{{ 'fc.partidos' | translate | uppercase}}</p>
-        <p class="value">{{ player.matches }}</p>
-        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+<ng-container *ngIf="isLoading; else playerDetailsTemplate">
+  <div class="spinner-container">
+    <img src="assets/spinner/spinner.svg" alt="Loading..." />
+  </div>
+</ng-container>
+
+<ng-template #playerDetailsTemplate>
+  <div *ngIf="player" class="player-container">
+    <div class="player-info">
+      <div class="stats">
+        <div class="stat-item">
+          <p class="title">{{ 'fc.partidos' | translate | uppercase}}</p>
+          <p class="value">{{ player.matches }}</p>
+          <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+        </div>
+        <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
+          <p class="title">{{ 'fc.goles' | translate | uppercase}}</p>
+          <p class="value">{{ player.goals }}</p>
+          <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+        </div>
+        <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
+          <p class="title">{{ 'fc.asistencias' | translate | uppercase}}</p>
+          <p class="value">{{ player.assists }}</p>
+          <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+        </div>
+        <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
+          <p class="title">{{ 'fc.porteria' | translate | uppercase}}</p>
+          <p class="value">{{ player.clean_sheets }}</p>
+          <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+        </div>
+        <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
+          <p class="title">{{ 'fc.paradas' | translate | uppercase}}</p>
+          <p class="value">{{ player.saves }}</p>
+          <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+        </div>
       </div>
-      <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
-        <p class="title">{{ 'fc.goles' | translate | uppercase}}</p>
-        <p class="value">{{ player.goals }}</p>
-        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
-      </div>
-      <div *ngIf="player.position !== 'Goalkeeper'" class="stat-item">
-        <p class="title">{{ 'fc.asistencias' | translate | uppercase}}</p>
-        <p class="value">{{ player.assists }}</p>
-        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
-      </div>
-      <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
-        <p class="title">{{ 'fc.porteria' | translate | uppercase}}</p>
-        <p class="value">{{ player.clean_sheets }}</p>
-        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
-      </div>
-      <div *ngIf="player.position === 'Goalkeeper'" class="stat-item">
-        <p class="title">{{ 'fc.paradas' | translate | uppercase}}</p>
-        <p class="value">{{ player.saves }}</p>
-        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+    </div>
+
+    <div class="player-image">
+      <img [src]="player.photo_new" alt="{{ player.name }}">
+      <div class="image-overlay">
+        <p>{{ player.position }}</p>
+        <h2>{{ player.name }}</h2>
       </div>
     </div>
   </div>
 
-  <div class="player-image">
-    <img [src]="player.photo_new" alt="{{ player.name }}">
-    <div class="image-overlay">
-      <p>{{ player.position }}</p>
-      <h2>{{ player.name }}</h2>
+  <div *ngIf="player" class="landing-container">
+    <div class="player-info">
+      <img [src]="player.photo" alt="{{ player.name }}" class="player-photo">
+      <div class="info-container">
+        <p class="description">{{ player.info }}</p>
+      </div>
+    </div>
+    <hr>
+    <div class="additional-info">
+      <div class="info-item">
+        <h2>{{ 'fc.nacionalidad' | translate | uppercase}}</h2>
+        <p>{{ player.nationality }}</p>
+      </div>
+      <div class="info-item">
+        <h2>{{ 'fc.peso' | translate | uppercase}}</h2>
+        <p>{{ player.weight }}</p>
+      </div>
+      <div class="info-item">
+        <h2>{{ 'fc.altura' | translate | uppercase}}</h2>
+        <p>{{ player.height }}</p>
+      </div>
+      <div class="info-item">
+        <h2>{{ 'fc.partidos' | translate | uppercase}}</h2>
+        <p>{{ player.matches }}</p>
+      </div>
     </div>
   </div>
-</div>
-
-<div *ngIf="player" class="landing-container">
-  <div class="player-info">
-    <img [src]="player.photo" alt="{{ player.name }}" class="player-photo">
-    <div class="info-container">
-      <p class="description">{{ player.info }}</p>
-    </div>
-  </div>
-  <hr>
-  <div class="additional-info">
-    <div class="info-item">
-      <h2>{{ 'fc.nacionalidad' | translate | uppercase}}</h2>
-      <p>{{ player.nationality }}</p>
-    </div>
-    <div class="info-item">
-      <h2>{{ 'fc.peso' | translate | uppercase}}</h2>
-      <p>{{ player.weight }}</p>
-    </div>
-    <div class="info-item">
-      <h2>{{ 'fc.altura' | translate | uppercase}}</h2>
-      <p>{{ player.height }}</p>
-    </div>
-    <div class="info-item">
-      <h2>{{ 'fc.partidos' | translate | uppercase}}</h2>
-      <p>{{ player.matches }}</p>
-    </div>
-  </div>
-</div>
-
-
+</ng-template>

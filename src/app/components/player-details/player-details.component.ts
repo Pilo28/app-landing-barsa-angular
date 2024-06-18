@@ -10,6 +10,7 @@ import { Player } from '../../models/player.interface';
 })
 export class PlayerDetailsComponent implements OnInit {
   player: Player | undefined;
+  isLoading = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +29,10 @@ export class PlayerDetailsComponent implements OnInit {
   getPlayerDetails(id: string): void {
     this.playersService.getPlayers().subscribe((players: Player[]) => {
       this.player = players.find(p => p.id === +id);
+      // Retraso de 1 segundo antes de finalizar la carga
+      setTimeout(() => {
+        this.isLoading = false; // Se termina la carga y se muestra el contenido
+      }, 1000);
     });
   }
 }

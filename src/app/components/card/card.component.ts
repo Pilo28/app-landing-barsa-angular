@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Player } from '../../models/player.interface';
 
@@ -7,10 +7,18 @@ import { Player } from '../../models/player.interface';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent {
+export class CardComponent implements OnInit {
   @Input() player!: Player;
+  isLoading = true;
 
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    // Simular carga de datos
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000); // 1000 milisegundos = 1 segundo
+  }
 
   navigateToPlayerDetail(): void {
     console.log(`Navigating to player detail for player ID: ${this.player.id}`);
