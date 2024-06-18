@@ -6,7 +6,7 @@ deploy dev in https://app-landing-barsa-angular-dev.vercel.app/
 
 Project still in development, progress on develop branch
 
-Updates
+#Updates
 A custom library has been added that provides the time and weather information for Barcelona. This library is published on npm and uses the OpenWeatherMap API. The created library is called my-bcn-time.
 The project has been refactored to use SASS and lazy image loading has been implemented.
 
