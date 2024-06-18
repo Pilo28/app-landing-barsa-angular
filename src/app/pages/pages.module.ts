@@ -10,6 +10,7 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { CardComponent } from '../components/card/card.component';
 import { PlayerDetailsComponent  } from '../components/player-details/player-details.component';
 import { BackgroundImgComponent } from '../components/background-img/background-img.component';
+import { WeatherLibModule } from 'my-bcn-time';
 
 
 
@@ -26,7 +27,8 @@ import { BackgroundImgComponent } from '../components/background-img/background-
   imports: [
     CommonModule,
     PagesRoutingModule,
-    TranslateModule
+    TranslateModule,
+    WeatherLibModule
   ]
 })
 export class PagesModule { }
