@@ -1,0 +1,42 @@
+<ng-container *ngIf="isLoading; else playerCardTemplate">
+  <div class="spinner">
+    <img src="assets/spinner/spinner.svg" alt="Loading..." />
+  </div>
+</ng-container>
+
+<ng-template #playerCardTemplate>
+  <div class="player-card" (click)="navigateToPlayerDetail()">
+    <img [src]="player.photo" alt="{{ player.name }}">
+    <div class="player-info">
+      <h3>{{ player.number }} {{ player.name }}</h3>
+      <p>{{ player.position }}</p>
+    </div>
+    <div class="additional-info">
+      <div class="info-block">
+        <p class="label">{{ 'fc.partidos' | translate | uppercase}}</p>
+        <p class="value">{{ player.matches }}</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+      </div>
+      <div *ngIf="player.position !== 'Goalkeeper'" class="info-block">
+        <p class="label">{{ 'fc.goles' | translate | uppercase}}</p>
+        <p class="value">{{ player.goals }}</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+      </div>
+      <div *ngIf="player.position !== 'Goalkeeper'" class="info-block">
+        <p class="label">{{ 'fc.asistencias' | translate | uppercase}}</p>
+        <p class="value">{{ player.assists }}</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+      </div>
+      <div *ngIf="player.position === 'Goalkeeper'" class="info-block">
+        <p class="label">{{ 'fc.porteria' | translate | uppercase}}</p>
+        <p class="value">{{ player.clean_sheets }}</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+      </div>
+      <div *ngIf="player.position === 'Goalkeeper'" class="info-block">
+        <p class="label">{{ 'fc.paradas' | translate | uppercase}}</p>
+        <p class="value">{{ player.saves }}</p>
+        <p class="season">{{ 'fc.temporada' | translate | uppercase}}</p>
+      </div>
+    </div>
+  </div>
+</ng-template>

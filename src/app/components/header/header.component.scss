@@ -1,0 +1,56 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.navbar {
+  background: linear-gradient(to right, $navbar-gradient-start, $navbar-gradient-end);
+  padding: $navbar-padding;
+  box-shadow: $navbar-box-shadow;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    .navbar-item {
+      margin: $navbar-item-margin;
+
+      a {
+        color: $white-color;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: $navbar-font-size;
+        @include transition(color, $transition-duration, ease);
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &.active a {
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+
+  .language-switcher {
+    display: flex;
+    gap: $language-switcher-gap; 
+    margin-right: $language-switcher-margin-right; 
+
+    img {
+      width: $flag-width; 
+      height: auto;
+      cursor: pointer;
+      @include transition(transform, $transition-duration, ease);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.landing-container {
+  background-color: $landing-bg-color;
+  color: $landing-text-color;
+  padding: 20px;
+  text-align: center;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  border-radius: $landing-border-radius $landing-border-radius 0 0; 
+  box-shadow: $landing-box-shadow; 
+}
+
+.hero {
+  position: relative;
+  padding: 50px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    color: $hero-text-color; 
+    font-size: $hero-font-size-small; 
+    font-weight: bold;
+    margin: 0; 
+  }
+
+  .sponsor {
+    display: flex;
+    align-items: center;
+
+    .sponsor-text {
+      font-size: $small-font-size; 
+      color: $sponsor-text-color; 
+      margin-right: 10px; 
+    }
+
+    .sponsor-logo {
+      width: $sponsor-logo-width; 
+    }
+  }
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  background-color: $nav-button-bg-color; 
+  color: $nav-button-text-color; 
+  border: none;
+  padding: 10px 20px; 
+  font-size: 14px; 
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  @include transitions(
+    background-color $transition-duration ease,
+    color $transition-duration ease
+  );
+
+  &:hover {
+    background-color: $nav-button-bg-hover;
+  }
+}
+
+.players-section {
+  h2 {
+    color: $players-title-color; 
+    margin-top: 20px;
+    font-size: $players-title-font-size; 
+    font-weight: bold;
+  }
+
+  .player-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

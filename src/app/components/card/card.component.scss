@@ -1,0 +1,83 @@
+
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.player-card {
+  position: relative;
+  overflow: hidden;
+  @include transition(transform, $transition-duration, ease);
+  background: $background-color;
+  cursor: pointer;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, $gradient-color-start 0%, $gradient-color-middle 50%, $gradient-color-end 100%);
+    z-index: 1;
+  }
+
+  .player-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: $info-padding;
+    color: $white-color;
+    text-align: center;
+    @include transition(transform, $transition-duration, ease);
+    z-index: 2; 
+  }
+
+  .additional-info {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    padding: $additional-info-padding;
+    color: $white-color;
+    text-align: center;
+    @include transition(bottom, $transition-duration, ease);
+    display: flex;
+    justify-content: space-between;
+    z-index: 3; 
+
+    .info-block {
+      width: 33%;
+      text-align: center;
+
+      .label {
+        font-weight: bold;
+      }
+
+      .value {
+        font-size: $large-font-size;
+        font-weight: bold;
+      }
+
+      .season {
+        font-size: $small-font-size; 
+        color: $light-gray-color;
+        margin-top: -5px; 
+        white-space: nowrap; 
+      }
+    }
+  }
+
+  &:hover {
+    .additional-info {
+      bottom: 0;
+    }
+
+    .player-info {
+      transform: translateY(-100%);
+    }
+  }
+}

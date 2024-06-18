@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+
+.site-footer {
+  height: $footer-height;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  .footer-content {
+    text-align: center;
+
+    h1 {
+      color: $white-color;
+      font-size: $footer-font-size; 
+    }
+  }
+}

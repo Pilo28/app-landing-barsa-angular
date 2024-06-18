@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.hero {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(24, 23, 51, 0), $background-color),
+              url('../../../assets/img/foto_aficio.jpg'); 
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: $hero-padding; 
+  color: $primary-color; 
+  font-size: $hero-font-size; 
+  font-weight: $hero-font-weight;
+  @include text-shadow(2px, 2px, 4px, $text-shadow-color); 
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $overlay-background; 
+    z-index: 1;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2; 
+  }
+}
