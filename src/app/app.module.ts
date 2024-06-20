@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { WeatherLibModule } from 'my-bcn-time';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+
 
 
 
@@ -24,6 +26,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    WeatherLibModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

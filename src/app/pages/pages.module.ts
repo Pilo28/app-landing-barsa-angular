@@ -10,7 +10,8 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { CardComponent } from '../components/card/card.component';
 import { PlayerDetailsComponent  } from '../components/player-details/player-details.component';
 import { BackgroundImgComponent } from '../components/background-img/background-img.component';
-
+import { WeatherLibModule } from 'my-bcn-time';
+import { SpinnerLoadComponent } from '../utils/components/spinner-load/spinner-load.component';
 
 
 @NgModule({
@@ -21,12 +22,14 @@ import { BackgroundImgComponent } from '../components/background-img/background-
     FooterComponent,
     CardComponent,
     PlayerDetailsComponent,
-    BackgroundImgComponent 
+    BackgroundImgComponent,
+    SpinnerLoadComponent
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
-    TranslateModule
+    TranslateModule,
+    WeatherLibModule
   ]
 })
 export class PagesModule { }

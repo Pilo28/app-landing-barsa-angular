@@ -37,7 +37,10 @@
     </div>
 
     <div class="player-image">
-      <img [src]="player.photo_new" alt="{{ player.name }}">
+      <img [src]="hasError ? 'assets/img/image-not-found.png' : player.photo_new" 
+           alt="{{ player.name }}" 
+           (load)="onLoad()" 
+           (error)="onError()">
       <div class="image-overlay">
         <p>{{ player.position }}</p>
         <h2>{{ player.name }}</h2>
