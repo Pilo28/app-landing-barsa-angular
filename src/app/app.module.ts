@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);

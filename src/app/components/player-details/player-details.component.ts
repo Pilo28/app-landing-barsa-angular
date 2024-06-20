@@ -11,6 +11,7 @@ import { Player } from '../../models/player.interface';
 export class PlayerDetailsComponent implements OnInit {
   player: Player | undefined;
   isLoading = true;
+  hasError = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +27,14 @@ export class PlayerDetailsComponent implements OnInit {
     });
   }
 
+  onLoad(): void {
+    this.isLoading = false;
+  }
+
+  onError(): void {
+    this.isLoading = false;
+    this.hasError = true;
+  }
   getPlayerDetails(id: string): void {
     this.playersService.getPlayers().subscribe((players: Player[]) => {
       this.player = players.find(p => p.id === +id);
